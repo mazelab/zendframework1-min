@@ -1,0 +1,20 @@
+{
+    "name": "zend/zendframework",
+    "description": "Zend Framework 1 composer fork with minimum require_once and include_path",
+    "version": "master-dev",
+    "type": "library",
+    "keywords": [
+        "zf1",
+        "zend",
+        "zendframework"
+    ],
+    "include-path": ["library/"],
+    "autoload": {
+        "psr-0": {"Zend": "library/"}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.13-dev"
+        }
+    }
+}
