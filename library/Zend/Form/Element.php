@@ -635,11 +635,6 @@ class Zend_Form_Element implements Zend_Validate_Interface
      */
     public function getLabel()
     {
-        $translator = $this->getTranslator();
-        if (null !== $translator) {
-            return $translator->translate($this->_label);
-        }
-
         return $this->_label;
     }
 
