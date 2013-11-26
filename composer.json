@@ -7,7 +7,7 @@
         "zend",
         "zendframework"
     ],
-    "homepage": "https://github.com/mazelab/zf1-composer",
+    "homepage": "https://github.com/mazelab/zendframework1-min",
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.2.11"
