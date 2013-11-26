@@ -1,22 +1,16 @@
-zf1-composer
-============
+zendframework1-min
+==================
 
 Zend Framework 1 with composer support and minimized require_once. The repository branches off from the version 1.12.x-minimal. For performance reasons require_once was commented out.
 
 Installation
 ============
 
-## vcs-style
-
-    "repositories": [
-        {
-            "type" : "git",
-            "url" : "https://github.com/cdsinternetagentur/zf1-composer.git"
-        }
-    ],
+## composer
+    
     "require": {
-        "php": ">=5.2.11",
-        "zend/zendframework": "<2"
+        
+        "mazelab/zendframework1-min": "<2"
     },
     
 This example shows the integration of the latest version.
