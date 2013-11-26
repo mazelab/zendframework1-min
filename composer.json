@@ -1,6 +1,6 @@
 {
-    "name": "zend/zendframework",
-    "description": "Zend Framework 1 composer fork with minimum require_once and include_path",
+    "name": "zend/framework1-min",
+    "description": "Zend Framework 1 fork with minimum require_once and include_path",
     "type": "library",
     "keywords": [
         "zf1",
@@ -15,6 +15,12 @@
     "include-path": ["library/"],
     "autoload": {
         "psr-0": {"Zend": "library/"}
+    },
+    "replace": {
+        "zendframework/zendframework1": "1.12.*",
+        "zend/zendframework": "1.*"
+    },
+    "confilct": {
+        "zendframework/zendframework1": "<1.12"
     }
-    
 }
