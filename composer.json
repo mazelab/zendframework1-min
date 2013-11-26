@@ -1,5 +1,5 @@
 {
-    "name": "zend/framework1-min",
+    "name": "zend/zendframework",
     "description": "Zend Framework 1 fork with minimum require_once and include_path",
     "type": "library",
     "keywords": [
@@ -17,10 +17,9 @@
         "psr-0": {"Zend": "library/"}
     },
     "replace": {
-        "zendframework/zendframework1": "1.12.*",
-        "zend/zendframework": "1.*"
+        "zendframework/zendframework1": "1.12.*"
     },
-    "confilct": {
+    "conflict": {
         "zendframework/zendframework1": "<1.12"
     }
 }
