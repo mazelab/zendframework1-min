@@ -7,8 +7,49 @@ Master: [![Build Status](https://api.travis-ci.org/zendframework/zf1.png?branch=
 RELEASE INFORMATION
 ===================
 
-Zend Framework 1.12.4 Release.
-Released on March 06, 2014.
+Zend Framework 1.12.7 Release.
+Released on June 12, 2014.
+
+SECURITY FIXES FOR 1.12.7
+-------------------------
+
+- **ZF2014-04:** Potential SQL Injection (SQLi) attack via ORDER expessions:
+  `Zend\Db\Select`'s `order()` method allwed passing function calls, but
+  did not provide checks to prevent SQLi vectors. As an example:
+
+  ```php
+  $select = $db->select()->order('MD5(1); select...');
+  ```
+
+  could be entered.
+
+  If you use `Zend\Db\Select` with ORDER clauses, we strongly urge that you
+  upgrade immediately.
+
+IMPORTANT FIXES FOR 1.12.7
+--------------------------
+
+- [#331](https://github.com/zendframework/zf1/pull/331) and
+  [#376](https://github.com/zendframework/zf1/pull/376) provide support
+  for PHPUnit 4 and 4.1, respectively, both within the Zend Framework test suite
+  and inside the `Zend_Test_PHPUnit` component.
+- [#333](https://github.com/zendframework/zf1/pull/333) backports recursive
+  page removal within `Zend_Navigation` from Zend Framework 2.
+- [#343](https://github.com/zendframework/zf1/pull/343) updates the `Hostname`
+  validator to support the new IANA top level domains.
+- Forward-compatibility changes were made to ensure Zend Framework 1 will run on
+  the upcoming PHP 5.6.
+
+
+IMPORTANT FIXES FOR 1.12.6
+--------------------------
+
+- [#307](https://github.com/zendframework/zf1/pull/307) fixes a backwards
+  compatibility break in the `Zend_Locale` component. 1.12.4 updated the
+  [CLDR](http://cldr.unicode.org) version used by Zend Framework 1, which
+  resulted in the removal of several locales we previously supported. The patch
+  in #307 adds locale aliases for these to the new locales supported in recent
+  versions of the CLDR, ensuring backwards compatibility for ZF1 users.
 
 SECURITY FIXES FOR 1.12.4
 -------------------------
@@ -245,9 +286,9 @@ We’d like to particularly thank Adam Lundrigan, Frank Brückner and
 Martin Hujer for their efforts in making this happen. Thanks also to the
 many people who ran the ZF1 unit tests and reported their results!
 
-For a complete list, visit:
+For a complete list of closed issues beginning with 1.12.3, visit:
 
- * http://framework.zend.com/issues/secure/IssueNavigator.jspa?requestId=12877
+ * https://github.com/zendframework/zf1/issues?labels=&milestone=&page=1&state=closed
  * http://framework.zend.com/changelog/
 
 MIGRATION NOTES
