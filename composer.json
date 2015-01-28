@@ -14,7 +14,7 @@
     },
     "include-path": ["library/"],
     "autoload": {
-        "psr-0": {"Zend": "library/"}
+        "psr-0": {"Zend_": "library/"}
     },
     "replace": {
         "zendframework/zendframework1": "1.12.*",
