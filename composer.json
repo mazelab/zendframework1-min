@@ -16,11 +16,8 @@
     "autoload": {
         "psr-0": {"Zend_": "library/"}
     },
-    "replace": {
-        "zendframework/zendframework1": "1.12.7"
-    },
     "conflict": {
-        "zendframework/zendframework1": "<1.12"
+        "zendframework/zendframework1": "*"
     },
     "abandoned": "zendframework/zendframework1"
 }
