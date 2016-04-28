@@ -17,10 +17,10 @@
         "psr-0": {"Zend_": "library/"}
     },
     "replace": {
-        "zendframework/zendframework1": "1.12.*",
-        "zend/zendframework": "1.*"
+        "zendframework/zendframework1": "1.12.7",
     },
     "conflict": {
         "zendframework/zendframework1": "<1.12"
-    }
+    },
+    "abandoned": "zendframework/zendframework1"
 }
